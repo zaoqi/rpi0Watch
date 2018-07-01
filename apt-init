@@ -33,8 +33,8 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com "$@"
 }
 apt_sources_add "##Raspbian"
 add "/raspbian/raspbian/ stretch main contrib non-free rpi"
-sudosh "echo 'deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui
-deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui'>/etc/apt/sources.list.d/raspi.list"
+sudosh "echo 'deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
+deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui'>/etc/apt/sources.list.d/raspi.list"
 up
 must sudo apt install dirmngr -y
 clean
