@@ -36,14 +36,14 @@ add "/raspbian/raspbian/ stretch main contrib non-free rpi"
 sudosh "echo 'deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
 deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui'>/etc/apt/sources.list.d/raspi.list"
 up
-must sudo apt install dirmngr -y
 clean
 
-apt_sources_add "##Debian"
-add "/debian/ stable main contrib non-free"
-add "/debian/ stable-updates main contrib non-free"
-add "/debian-security/ stable/updates main non-free contrib"
-add_keys 8B48AD6246925553
-up
-clean
+#must sudo apt install dirmngr -y
+#apt_sources_add "##Debian"
+#add "/debian/ stable main contrib non-free"
+#add "/debian/ stable-updates main contrib non-free"
+#add "/debian-security/ stable/updates main non-free contrib"
+#add_keys 8B48AD6246925553
+#up
+#clean
 
