@@ -38,5 +38,5 @@ apt_sources_add "##Debian"
 add "/debian/ stable main contrib non-free"
 add "/debian/ stable-updates main contrib non-free"
 add "/debian-security/ stable/updates main non-free contrib"
-add_keys
+add_keys 8B48AD6246925553
 
