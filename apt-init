@@ -1,0 +1,42 @@
+#!/bin/sh
+sudo sh -c ">/etc/apt/sources.list"
+mirrors="http://mirrors.zju.edu.cn http://mirrors.ustc.edu.cn"
+apt_sources_add(){
+sudo sh -c "echo '$1' >> /etc/apt/sources.list"
+}
+add(){
+for m in $mirrors
+do
+apt_sources_add "deb $m$1"
+apt_sources_add "deb-src $m$1"
+done
+}
+must(){
+until "$@"
+do
+echo
+done
+}
+clean(){
+sudo apt autoremove --purge -y
+sudo apt clean
+}
+up(){
+must sudo apt update
+must sudo apt full-upgrade -y
+}
+add_keys(){
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com "$@"
+}
+apt_sources_add "##Raspbian"
+add "/raspbian/raspbian/ stretch main contrib non-free rpi"
+up
+must sudo apt install dirmngr -y
+clean
+
+apt_sources_add "##Debian"
+add "/debian/ stable main contrib non-free"
+add "/debian/ stable-updates main contrib non-free"
+add "/debian-security/ stable/updates main non-free contrib"
+add_keys
+
