@@ -1,5 +1,8 @@
 #!/bin/sh
-sudo sh -c ">/etc/apt/sources.list"
+sudosh(){
+sudo sh -c "$@"
+}
+sudosh ">/etc/apt/sources.list"
 mirrors="http://mirrors.zju.edu.cn http://mirrors.ustc.edu.cn"
 apt_sources_add(){
 sudo sh -c "echo '$1' >> /etc/apt/sources.list"
@@ -30,6 +33,8 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com "$@"
 }
 apt_sources_add "##Raspbian"
 add "/raspbian/raspbian/ stretch main contrib non-free rpi"
+sudosh "echo 'deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui
+deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui'>/etc/apt/sources.list.d/raspi.list"
 up
 must sudo apt install dirmngr -y
 clean
