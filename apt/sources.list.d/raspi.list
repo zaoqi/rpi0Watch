@@ -1,0 +1,2 @@
+deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
+deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
