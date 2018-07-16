@@ -1,5 +1,5 @@
 + screen https://item.taobao.com/item.htm?id=553347108316
-+ micro USB公头
++ micro USB公头 2P或4P或5P
 + 小`自锁开关` 2个 https://item.taobao.com/item.htm?id=547241519321
 + 导线 https://item.taobao.com/item.htm?id=41296905861
 + micro sd 卡
@@ -18,3 +18,6 @@ cp boot/* `<boot directory>`
 + `充电宝主板`的USB输出的5V经过`自锁开关`，连到`micro USB公头`。
 + `充电宝主板`的USB输出的GND连到`micro USB公头`。
 + `micro USB公头`插到`Raspberry Pi Zero W`上。
+
+# 图
+![usb](https://img.alicdn.com/imgextra/i2/2189983982/TB2NeXuib1YBuNjSszhXXcUsFXa_!!2189983982.jpg)
