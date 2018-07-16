@@ -12,6 +12,7 @@ cp boot/* `<boot directory>`
 
 # 制作
 + 购买`screen`，让卖家焊接到`Raspberry Pi Zero W`。
++ `micro sd`写入`Raspbian`，安装驱动（`Install`）。
 + 12(`GPIO 18`)和14(`GND`)间连一个`自锁开关` 用来控制背光。
 + 去掉`电池`的`保护板`，连到`充电宝主板`。
 + `充电宝主板`的USB输出的5V经过`自锁开关`，连到`micro USB公头`。
